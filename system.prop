@@ -69,3 +69,14 @@ persist.sys.usb.config=mtp,adb
 
 # add support for USB storage type
 persist.sys.isUsbOtgEnabled=1
+
+# Legacy Mali crashes system_server rendering the GL screen-off animation
+ro.display.colorfade=false
+
+# USB IDs used by init.mt8127.usb.rc (Oreo init skips writes with undefined props)
+ro.usb.vid=18d1
+ro.usb.pid.mtp=4ee1
+ro.usb.pid.mtp.adb=4ee2
+ro.usb.pid.ptp=4ee5
+ro.usb.pid.ptp.adb=4ee6
+ro.usb.pid.adb=4ee7
