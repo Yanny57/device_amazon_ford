@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="ford" fetch="https://github.com/" />
+
+  <project path="device/amazon/ford" name="Yanny57/device_amazon_ford" remote="ford" revision="lineage-15.1" />
+  <project path="device/amazon/mt8127-common" name="Yanny57/device_amazon_mt8127-common" remote="ford" revision="lineage-15.1" />
+  <project path="kernel/amazon/mt8127-common" name="Yanny57/kernel_amazon_mt8127-common" remote="ford" revision="lineage-15.1" />
+  <project path="vendor/amazon/mt8127-common" name="Yanny57/vendor_amazon_mt8127-common" remote="ford" revision="lineage-15.1" />
+  <project path="vendor/amazon/ford" name="cm14-mt8127/vendor_amazon_ford" remote="ford" revision="cm-14.1" />
+</manifest>
