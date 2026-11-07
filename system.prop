@@ -43,6 +43,8 @@ ro.smartvolume.config=/system/vendor/smartvolume/ford/
 ro.config.notification_sound=Verso.ogg
 
 ro.sf.hwrotation=270
+# Q surfaceflinger ignores ro.sf.hwrotation
+ro.surface_flinger.primary_display_orientation=ORIENTATION_270
 
 # maximum backup size for factory reset whitelist in kB
 ro.recovery.wl.maxstore=524288
@@ -80,3 +82,10 @@ ro.usb.pid.mtp.adb=4ee2
 ro.usb.pid.ptp=4ee5
 ro.usb.pid.ptp.adb=4ee6
 ro.usb.pid.adb=4ee7
+
+# TEMP DEBUG (17.1 bring-up): no RescueParty factory resets on boot loops
+persist.sys.disable_rescue=true
+
+# Kernel 3.10 FunctionFS has no AIO: blocking adbd I/O
+sys.usb.ffs.aio_compat=true
+persist.adb.nonblocking_ffs=0
