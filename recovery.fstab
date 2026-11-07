@@ -9,4 +9,5 @@
 /dev/block/platform/mtk-msdc.0/by-name/recovery /recovery   emmc      defaults        defaults
 /dev/block/mmcblk0boot0                         /boot0      emmc      defaults        defaults
 /dev/block/platform/mtk-msdc.0/by-name/system   /system     ext4      defaults        defaults
+/dev/block/platform/mtk-msdc.0/by-name/vendor   /vendor     ext4      defaults        defaults
 
