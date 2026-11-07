@@ -8,9 +8,8 @@ BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 # inherit from the proprietary version
 -include vendor/amazon/mt8127-common/BoardConfigVendor.mk
 
-# Properties (appended: the Go profile already sets TARGET_SYSTEM_PROP, which
-# replaces the default device/amazon/ford/system.prop)
-TARGET_SYSTEM_PROP += device/amazon/ford/system.prop
+# Device properties go to /vendor/build.prop (a GSI replaces /system/build.prop)
+TARGET_VENDOR_PROP := device/amazon/ford/vendor.prop
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := ford
