@@ -93,3 +93,5 @@ persist.adb.nonblocking_ffs=0
 # and TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+# Translucent layers to GPU composition (MT8127 HWC blends them wrongly)
+ro.vendor.hwc2on1.client_blended=true
