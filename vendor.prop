@@ -89,3 +89,7 @@ persist.sys.disable_rescue=true
 # Kernel 3.10 FunctionFS has no AIO: blocking adbd I/O
 sys.usb.ffs.aio_compat=true
 persist.adb.nonblocking_ffs=0
+# R: no configstore service; these replace NUM_FRAMEBUFFER_SURFACE_BUFFERS
+# and TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
