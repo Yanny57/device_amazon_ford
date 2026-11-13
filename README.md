@@ -3,7 +3,7 @@
 Unofficial LineageOS 18.1 (Android 11) for the 5th generation Fire 7
 (MediaTek MT8127, Mali-450 MP, 1 GB RAM, kernel 3.10). It builds on the
 CM 14.1 / LineageOS 14.1 trees by the [cm14-mt8127](https://github.com/cm14-mt8127)
-team (ggow and contributors) and their later 15.1/17.1 ports.
+team (ggow and contributors).
 
 > **Testing build.** So far it has only run on one 8 GB unit, and that unit is
 > a non-production prototype (efuse `prod=0`). Reports from retail units are
@@ -61,7 +61,7 @@ in, the zip saves the old partition table to `ford-gpt-backup/` on it.
 4. Flash the LineageOS zip, and Android 11 ARM GApps if you want them.
 5. Wipe Dalvik/cache and reboot. The first boot takes a few minutes.
 
-Already on the treble layout (for example from an earlier 17.1/18.1 build)?
+Already on the treble layout (for example from an earlier 18.1 build)?
 Skip steps 2-3. Flashing the treble zip again never wipes anything: it only
 formats partitions that don't mount.
 
