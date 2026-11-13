@@ -2,9 +2,17 @@
 <manifest>
   <remote name="ford" fetch="https://github.com/" />
 
-  <project path="device/amazon/ford" name="Yanny57/device_amazon_ford" remote="ford" revision="lineage-15.1" />
-  <project path="device/amazon/mt8127-common" name="Yanny57/device_amazon_mt8127-common" remote="ford" revision="lineage-15.1" />
-  <project path="kernel/amazon/mt8127-common" name="Yanny57/kernel_amazon_mt8127-common" remote="ford" revision="lineage-15.1" />
-  <project path="vendor/amazon/mt8127-common" name="Yanny57/vendor_amazon_mt8127-common" remote="ford" revision="lineage-15.1" />
-  <project path="vendor/amazon/ford" name="cm14-mt8127/vendor_amazon_ford" remote="ford" revision="cm-14.1" />
+  <project path="device/amazon/ford" name="Yanny57/device_amazon_ford" remote="ford" revision="lineage-18.1" />
+  <project path="device/amazon/mt8127-common" name="Yanny57/device_amazon_mt8127-common" remote="ford" revision="lineage-18.1" />
+  <project path="kernel/amazon/mt8127-common" name="Yanny57/kernel_amazon_mt8127-common" remote="ford" revision="lineage-18.1" />
+  <project path="vendor/amazon/mt8127-common" name="Yanny57/vendor_amazon_mt8127-common" remote="ford" revision="lineage-18.1" />
+  <project path="vendor/amazon/ford" name="Yanny57/vendor_amazon_ford" remote="ford" revision="lineage-18.1" />
+
+  <!-- ford kernel must be built with GCC 4.8 (4.9 kernels reset early in boot) -->
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" groups="pdk,linux,arm" clone-depth="1" remote="aosp" revision="26e93f6af47f7bd3a9beb5c102a5f45e19bfa38a" upstream="master" />
+
+  <!-- Mali-450 is OpenGL ES 2.0 only. Chromium 146+ refuses ES 2 on Android (no GPU
+       compositing, blank hardware video), so stay on the last WebView that allows it. -->
+  <remove-project name="LineageOS/android_external_chromium-webview_prebuilt_arm" />
+  <project path="external/chromium-webview/prebuilt/arm" name="LineageOS/android_external_chromium-webview_prebuilt_arm" groups="pdk" revision="f547731aef7f92fed845d822d9fec66ddad04cd3" upstream="main" />
 </manifest>
