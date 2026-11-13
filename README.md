@@ -29,6 +29,12 @@ Known issues:
   an OpenGL ES 2.0 GPU. Don't switch WebView to a newer one.
 - The camera provider can crash in rare cases; the camera recovers by itself.
 
+The kernel version shows as `3.18.0-3.10.108...` in Settings and `uname`. The
+kernel is really 3.10.108. The `3.18.0-` prefix is only there to get past
+userspace version checks (ART needs it to use the backported `memfd_create`
+for its JIT, which system_server requires). `/proc/version`, module vermagic
+and `LINUX_VERSION_CODE` still report 3.10.
+
 ## Installing
 
 You need the unlocked bootloader and TWRP for ford.
